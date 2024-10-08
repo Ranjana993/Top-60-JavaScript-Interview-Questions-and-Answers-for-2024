@@ -1,13 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Course from "./Pages/Course";
-import Hero from "./Pages/Hero";
+import Layout from "./Pages/Layout";
+import HtmlConceptsPage from "./components/HTML/HtmlConceptsPage";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Course />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/html-concepts" element={<HtmlConceptsPage />} />
+      </Routes>
     </>
   );
 }
