@@ -2,10 +2,13 @@
 const Sidebar = ({ selectedConcept, setSelectedConcept }) => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">HTML Concepts</h2>
+      <h2 className="text-2xl font-bold mb-6">JavaScript</h2>
       <ul className="space-y-4">
-        <li className={`hover:text-yellow-300 cursor-pointer ${selectedConcept === 'Basic' ? 'text-yellow-300' : ''}`}
-          onClick={() => setSelectedConcept('Basic')} >
+        <li
+          className={`hover:text-yellow-300 cursor-pointer ${selectedConcept === 'Basic' ? 'text-yellow-300' : ''
+            }`}
+          onClick={() => setSelectedConcept('Basic')}
+        >
           Basic Concepts
         </li>
         <li

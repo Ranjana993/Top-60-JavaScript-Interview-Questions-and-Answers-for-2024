@@ -2,14 +2,17 @@ import { useState } from 'react';
 import Sidebar from './Sidebar';
 import MainContent from './MainContent';
 
-const HtmlConceptsPage = () => {
+const JavaScriptConceptsPage = () => {
   const [selectedConcept, setSelectedConcept] = useState('Basic');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Add state to toggle sidebar for mobile
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar toggle for mobile
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       {/* Sidebar Toggle Button for Mobile */}
-      <button  className="md:hidden p-4 bg-gray-800 text-white" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+      <button
+        className="md:hidden p-4 bg-gray-800 text-white"
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+      >
         {isSidebarOpen ? 'Close Menu' : 'Open Menu'}
       </button>
 
@@ -26,4 +29,4 @@ const HtmlConceptsPage = () => {
   );
 };
 
-export default HtmlConceptsPage;
+export default JavaScriptConceptsPage;
